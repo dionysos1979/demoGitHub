@@ -14,4 +14,9 @@ public class GreetingController {
         return "greeting";
     }
 
+    @GetMapping("/cashflow")
+    public String cashflow(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "cashflow";
+    }
 }
